@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # evil.sh — http://tools.apsl.net/evil.sh
-# wget http://tools.apsl.net/evil.sh -O ~/evil.sh && echo "source ~/evil.sh" >> .bash_profile
+# wget http://tools.apsl.net/evil.sh -O ~/evil.sh && chmod +x ~/evil.sh && echo "source ~/evil.sh" >> ~/.bash_profile
 
 # Set `less` as the default editor.
 export EDITOR=/bin/less;
